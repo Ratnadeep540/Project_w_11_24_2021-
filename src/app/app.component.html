@@ -1,0 +1,18 @@
+<body bgcolor="black">
+
+<h1 style="margin-left:10px; color:orange;">Google pay Apis</h1>
+<app-paymentgateway></app-paymentgateway>
+<div style="text-align:center;">
+<google-pay-button class="ml.10"
+    environment="TEST"
+    buttonType="buy"
+    buttonColor="white"
+    [paymentRequest]="paymentRequest"
+    (loadpaymentdata)="onLoadPaymentData($event)"
+    (error)="onError($event)"
+    [paymentAuthorizedCallback]="onPaymentDataAuthorized"
+  >
+  </google-pay-button>
+  </div>
+<app-header></app-header>
+</body>
